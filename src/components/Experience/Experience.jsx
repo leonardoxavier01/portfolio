@@ -4,7 +4,7 @@ import './styles.css'
 
 const Experience = () => {
   return (
-    <div className='red'>Experience</div>
+    <section id='experience'>Experience</section>
   )
 }
 
