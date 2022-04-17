@@ -5,31 +5,8 @@ import { FiUsers } from 'react-icons/fi'
 import { VscFolderLibrary } from 'react-icons/vsc'
 
 import './styles.css'
-import { useState } from 'react'
 
 const About = () => {
-  const data = {
-    cardData: [
-      {
-        id: 1,
-        title: 'Experience',
-        description: '3+ years working',
-        icon: <FaAward className='about__card' />,
-      },
-      {
-        id: 2,
-        title: 'Clients',
-        description: '200+ worldwide',
-        icon: <FiUsers className='about__card' />,
-      },
-      {
-        id: 3,
-        title: 'Projects',
-        description: '3+ completed',
-        icon: <VscFolderLibrary className='about__card' />,
-      }
-    ]
-  }
   return (
     <section id='about'>
       <h5>Get To Know</h5>
@@ -41,17 +18,25 @@ const About = () => {
           </div>
         </div>
         <div className='about__content'>
-          {data.cardData.map((item, index) => {
-            return (
-              <div className="about__cards">
-                <article className='about__card'>
-                  {item.icon}
-                  <h5>{item.title}</h5>
-                  <small>{item.description}</small>
-                </article>
-              </div>
-            )
-          })}
+          <div className="about__cards">
+            <article className='about__card'>
+              <FaAward className='about__icon' />
+              <h5>Experience</h5>
+              <small>3+ years working</small>
+            </article>
+            <article className='about__card'>
+              <FiUsers className='about__icon' />
+              <h5>Clients</h5>
+              <small>200+ worldwide</small>
+            </article>
+            <article className='about__card'>
+              <VscFolderLibrary className='about__icon' />
+              <h5>Projects</h5>
+              <small>3+ completed</small>
+            </article>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nemo, eum beatae asperiores sunt voluptates aspernatur temporibus in. Accusamus totam culpa pariatur nulla, magni et possimus exercitationem illum aperiam incidunt.</p>
+          <a href="#contact" className='btn btn-primary'>Let's Talk</a>
         </div>
       </div>
     </section>
